@@ -1,0 +1,74 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #a0e7e5, #b4f8c8);
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    margin: 10px 0 30px;
+    font-size: 2rem;
+}
+
+/* VIDEO GRID */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 40px;
+}
+
+/* VIDEO CARD */
+.video-card {
+    background: rgba(255, 255, 255, 0.248);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+/* VIDEO FRAME */
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* TITLE */
+.video-card h3 {
+    margin: 12px 0 5px;
+    font-size: 1.1rem;
+}
+
+/* DESCRIPTION */
+.video-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .video-container {
+        padding: 15px;
+    }
+
+    .video-card iframe {
+        height: 180px;
+    }
+}

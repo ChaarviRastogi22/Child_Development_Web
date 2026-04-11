@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Growing Together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Same CSS as login -->
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+<div class="container">
+    
+    <!-- Left Panel (Same Style as Login) -->
+    <div class="left-panel">
+        <img class="leftPanelImage" src="signinLeftPanel.png">
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+        <h1>Join Growing Together</h1>
+        <form id="registerForm">
+            
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" required>
+                    I agree to the terms & privacy policy
+                </label>
+            </div>
+            
+            <button type="submit" class="login-btn">
+                Register
+            </button>
+            
+        </form>
+
+        <div class="extra-links">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+</div>
+
+<script src="register.js"></script>
+
+</body>
+</html>
