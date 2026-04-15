@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -34,25 +35,38 @@
             <div class="card">Mood 😊</div>
             <div class="card">Progress 📊</div>
             <div class="card">Streak 🔥</div>
-            <div class="card">Alerts ⚠️</div>
+            <div class="card">Resume</div>
         </div>
 
         <div class="main">
             <div class="left">
                 <h3>Progress Overview</h3>
-                <div class="graph-box">Graph here</div>
+                <div class="graph-box">
+                    <canvas id="progressChart"></canvas>
+                </div>
             </div>
 
             <div class="right">
                 <h3>Recommendations</h3>
                 <ul>
                     <li>Try breathing exercise</li>
+                    <div class="video-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wlf1T5nrO50?si=gBlhLMiQRCIT-Wc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Understanding Anger</h3>
+        <p>Why children feel anger and how to handle it.</p>
+    </div>
                     <li>Watch calming video</li>
+                    <div class="video-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wlf1T5nrO50?si=gBlhLMiQRCIT-Wc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Understanding Anger</h3>
+        <p>Why children feel anger and how to handle it.</p>
+    </div>
                 </ul>
             </div>
         </div>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
