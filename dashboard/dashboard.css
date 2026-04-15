@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #a0e7e5, #b4f8c8);
+    background-size: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    /* 🔥 transparent base */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* 🔥 SMOOTH BLEND INTO HERO */
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+
+/* LOGO */
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.nav-links li a:hover {
+    color: #ffae42;
+}
+.profile-icon {
+    font-size: 40px;
+    color: #333;
+    cursor: pointer;
+}
+.dashboard {
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.topbar {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.graph-box {
+    height: 200px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
