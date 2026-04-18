@@ -224,13 +224,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Submit + Redirect
         if (form) {
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
+            form.addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-                // You can process/save data here
+            const formData = new FormData(form);
 
-                window.location.href = "../content.html";
+            let data = {};
+
+            formData.forEach((value, key) => {
+                // handle multiple checkbox values
+                if (data[key]) {
+                    if (!Array.isArray(data[key])) {
+                        data[key] = [data[key]];
+                    }
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
             });
+
+            console.log(data); // debug
+
+            // send to backend
+            await fetch("http://localhost:5000/api/form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            // redirect after save
+            window.location.href = "../content.html";
+        });
         }
     }
 

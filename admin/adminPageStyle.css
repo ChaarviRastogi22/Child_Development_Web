@@ -141,9 +141,3 @@ body {
     margin: 20px;
     border-radius: 12px;
 }
-
-.logo img {
-    height: 40px;   /* control size */
-    width: auto;
-    display: block; /* removes extra bottom gap */
-}

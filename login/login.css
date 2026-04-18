@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -120,7 +120,7 @@ body {
 
 /* Extra Links */
 .extra-links {
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
     font-size: 14px;
 }
