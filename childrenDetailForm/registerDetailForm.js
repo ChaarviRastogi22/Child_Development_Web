@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             form.innerHTML += `
             
             <div class="form-section">
-            <h3>👶 Child ${i}</h3>
+            <h3> Child ${i}</h3>
 
             <div class="input-group">
                 <label>Full Name</label>
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // redirect after save
-            window.location.href = "../content.html";
+            window.location.href = "../dashboard/customDashboard.html";
         });
         }
     }

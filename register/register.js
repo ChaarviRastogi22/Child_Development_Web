@@ -17,23 +17,28 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                password: password
-            })
+            body: JSON.stringify({ name, email, password })
         });
 
         const data = await res.json();
 
-        alert(data.message);
+        // 🔥 Handle duplicate user
+        if (!data.success) {
+            alert("Account already exists. Redirecting to login...");
 
-        if (res.ok) {
-            window.location.href = "../login/login.html";
+            setTimeout(() => {
+                window.location.href = "../login/login.html";
+            }, 1500);
+
+            return;
         }
 
+        // ✅ Successful registration
+        alert("Registration successful!");
+        window.location.href = "../childrenDetailForm/registerDetailForm.html";
+
     } catch (error) {
-    console.error("Full Error:", error);
-    alert("Check console ❌");
-}
+        console.error("Full Error:", error);
+        alert("Something went wrong ❌");
+    }
 });
