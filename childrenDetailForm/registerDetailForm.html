@@ -7,103 +7,97 @@
     </head>
 
     <body>
-
         <div class="container">
-
-        <div class="left-panel">
-            <h1>Tell Us About Your Child </h1>
-            <p>Let’s get started 💭</p>
-        </div>
+            <div class="left-panel">
+                <h1>Tell Us About Your Child </h1>
+                <p>Let’s get started 💭</p>
+            </div>
 
             <div class="right-panel">
-
                 <div class="progress-bar">
                     <div id="progress"></div>
                 </div>
 
                 <form id="multiForm">
-
                     <!-- STEP 1 -->
                     <div class="step active">
                         <h2>About Your Child</h2>
                         <h3>Age</h3>
                         <div class="options">
-                            <label class="option"><input type="radio" name="age"><span>3-4</span></label>
-                            <label class="option"><input type="radio" name="age"><span>4-5</span></label>
-                            <label class="option"><input type="radio" name="age"><span>5-6</span></label>
-                            <label class="option"><input type="radio" name="age"><span>6-7</span></label>
+                            <label class="option"><input type="radio" name="age" value="3-4" required><span>3-4</span></label>
+                            <label class="option"><input type="radio" name="age" value="4-5"><span>4-5</span></label>
+                            <label class="option"><input type="radio" name="age" value="5-6"><span>5-6</span></label>
+                            <label class="option"><input type="radio" name="age" value="6-7"><span>6-7</span></label>
                         </div>
                         <h3>Gender</h3>
                         <div class="options">    
-                            <label class="option"><input type="radio" name="gender"><span>Male</span></label>
-                            <label class="option"><input type="radio" name="gender"><span>Female</span></label>
-                            <label class="option"><input type="radio" name="gender"><span>Prefer not to say</span></label>
+                            <label class="option"><input type="radio" name="gender" value="Male" required><span>Male</span></label>
+                            <label class="option"><input type="radio" name="gender" value="Female"><span>Female</span></label>
+                            <label class="option"><input type="radio" name="gender" value="Prefer not to say"><span>Prefer not to say</span></label>
                         </div>
-
                     </div>
 
                     <!-- STEP 2 -->
                     <div class="step">
                         <h2>Family & Caregiving</h2>
-                        
                         <h3>Your relation with the child</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="relation"><span>Mother</span></label>
-                        <label class="option"><input type="radio" name="relation"><span>Father</span></label>
-                        <label class="option"><input type="radio" name="relation"><span>Guardian</span></label>
-                        <label class="option"><input type="radio" name="relation"><span>Caregiver</span></label>
-                        <label class="option"><input type="radio" name="relation"><span>Other</span></label>
-                        <textarea placeholder="Your answer..."></textarea>
+                            <label class="option"><input type="radio" name="relation" value="Mother" required><span>Mother</span></label>
+                            <label class="option"><input type="radio" name="relation" value="Father"><span>Father</span></label>
+                            <label class="option"><input type="radio" name="relation" value="Guardian"><span>Guardian</span></label>
+                            <label class="option"><input type="radio" name="relation" value="Caregiver"><span>Caregiver</span></label>
+                            <label class="option"><input type="radio" name="relation" value="Other"><span>Other</span></label>
+                            <textarea placeholder="Your answer..." name="relation_other"></textarea>
                         </div>
                         
                         <h3>Mother's Employment Status</h3>
                         <div class="options">
-                            <label class="option"><input type="radio" name="mothers_empployment"><span>Working- Full time</span></label>
-                            <label class="option"><input type="radio" name="mothers_empployment"><span>Working Part time</span></label>
-                            <label class="option"><input type="radio" name="mothers_empployment"><span>Homemaker/ Non-working</span></label>
-                            <label class="option"><input type="radio" name="mothers_empployment"><span>Other:</span></label>
-                            <textarea placeholder="Your answer..."></textarea>
+                            <label class="option"><input type="radio" name="mothers_empployment" value="Working- Full time" required><span>Working- Full time</span></label>
+                            <label class="option"><input type="radio" name="mothers_empployment" value="Working Part time"><span>Working Part time</span></label>
+                            <label class="option"><input type="radio" name="mothers_empployment" value="Homemaker/ Non-working"><span>Homemaker/ Non-working</span></label>
+                            <label class="option"><input type="radio" name="mothers_empployment" value="Other"><span>Other:</span></label>
+                            <textarea placeholder="Your answer..." name="mothers_employment_other"></textarea>
                         </div>
                         
                         <h3>Father's Employment Status</h3>
                         <div class="options">
-                            <label class="option"><input type="radio" name="fathers_employment"><span>Working- Full time</span></label>
-                            <label class="option"><input type="radio" name="fathers_employment"><span>Working Part time</span></label>
-                            <label class="option"><input type="radio" name="fathers_employment"><span>Non-working</span></label>
-                            <label class="option"><input type="radio" name="fathers_employment"><span>Other:</span></label>
-                            <textarea placeholder="Your answer..."></textarea>
+                            <label class="option"><input type="radio" name="fathers_employment" value="Working- Full time" required><span>Working- Full time</span></label>
+                            <label class="option"><input type="radio" name="fathers_employment" value="Working Part time"><span>Working Part time</span></label>
+                            <label class="option"><input type="radio" name="fathers_employment" value="Non-working"><span>Non-working</span></label>
+                            <label class="option"><input type="radio" name="fathers_employment" value="Other"><span>Other:</span></label>
+                            <textarea placeholder="Your answer..." name="fathers_employment_other"></textarea>
                         </div>
                         
                         <h3>Monthly family income</h3>
                         <div class="options">
-                            <label class="option"><input type="radio" name="income"><span>Less than 25000/- INR</span></label>
-                            <label class="option"><input type="radio" name="income"><span>25000-50000/- INR</span></label>
-                            <label class="option"><input type="radio" name="income"><span>50000-100000/- INR</span></label>
-                            <label class="option"><input type="radio" name="income"><span>Above 100000/- INR</span></label>
+                            <label class="option"><input type="radio" name="income" value="Less than 25000/- INR" required><span>Less than 25000/- INR</span></label>
+                            <label class="option"><input type="radio" name="income" value="25000-50000/- INR"><span>25000-50000/- INR</span></label>
+                            <label class="option"><input type="radio" name="income" value="50000-100000/- INR"><span>50000-100000/- INR</span></label>
+                            <label class="option"><input type="radio" name="income" value="Above 100000/- INR"><span>Above 100000/- INR</span></label>
                         </div>
                         
                         <h3>Primary caregiver of the child</h3>
                         <div class="options">
-                            <label class="option"><input type="radio" name="primary_caregiver"><span>Mother</span></label>
-                            <label class="option"><input type="radio" name="primary_caregiver"><span>Father</span></label>
-                            <label class="option"><input type="radio" name="primary_caregiver"><span>Guardian</span></label>
-                            <label class="option"><input type="radio" name="primary_caregiver"><span>Babysitter/ Nanny</span></label>
-                            <label class="option"><input type="radio" name="primary_caregiver"><span>Daycare/ Creche</span></label>
-                            <label class="option"><input type="radio" name="primary_caregiver"><span>Other:</span></label>
-                            <textarea placeholder="Your answer..."></textarea>
+                            <label class="option"><input type="radio" name="primary_caregiver" value="Mother" required><span>Mother</span></label>
+                            <label class="option"><input type="radio" name="primary_caregiver" value="Father"><span>Father</span></label>
+                            <label class="option"><input type="radio" name="primary_caregiver" value="Guardian"><span>Guardian</span></label>
+                            <label class="option"><input type="radio" name="primary_caregiver" value="Babysitter/ Nanny"><span>Babysitter/ Nanny</span></label>
+                            <label class="option"><input type="radio" name="primary_caregiver" value="Daycare/ Creche"><span>Daycare/ Creche</span></label>
+                            <label class="option"><input type="radio" name="primary_caregiver" value="Other"><span>Other:</span></label>
+                            <textarea placeholder="Your answer..." name="primary_caregiver_other"></textarea>
                         </div>
                         
                         
                         <h3>In the absence of parents who usually spends time with the child </h3>
                         <h4>You can choose more than one option</h4>
                         <div class="options">
-                            <label class="pill"><input type="checkbox"><span> Grandparent</span></label>
-                            <label class="pill"><input type="checkbox"><span>Sibling</span></label>
-                            <label class="pill"><input type="checkbox"><span>Babysitter/ Nany</span></label>
-                            <label class="pill"><input type="checkbox"><span>Daycare staff</span></label>
-                            <label class="pill"><input type="checkbox"><span>Stays alone with access to screen</span></label>
-                            <label class="pill"><input type="checkbox"><span>Other</span></label>
-                            <textarea placeholder="Your answer..."></textarea>
+                            <label class="pill"><input type="checkbox" name="absent_parent_caretaker[]" value="Grandparent" required><span> Grandparent</span></label>
+                            <label class="pill"><input type="checkbox" name="absent_parent_caretaker[]" value="Sibling"><span>Sibling</span></label>
+                            <label class="pill"><input type="checkbox" name="absent_parent_caretaker[]" value="Babysitter/ Nanny"><span>Babysitter/ Nanny</span></label>
+                            <label class="pill"><input type="checkbox" name="absent_parent_caretaker[]" value="Daycare staff"><span>Daycare staff</span></label>
+                            <label class="pill"><input type="checkbox" name="absent_parent_caretaker[]" value="Stays alone with access to screen"><span>Stays alone with access to screen</span></label>
+                            <label class="pill"><input type="checkbox" name="absent_parent_caretaker[]" value="Other"><span>Other</span></label>
+                            <textarea placeholder="Your answer..." name="absent_parent_caretaker_other"></textarea>
                         </div>   
                     </div>
                     
@@ -112,80 +106,79 @@
                         <h2>Daily Interaction</h2>
                         <h3>On an average, how much quality time do you personally spend with the child daily?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="quality_time"><span>Less than an hour</span></label>
-                        <label class="option"><input type="radio" name="quality_time"><span>1-2 hours</span></label>
-                        <label class="option"><input type="radio" name="quality_time"><span>2-3 hours</span></label>
-                        <label class="option"><input type="radio" name="quality_time"><span>More than 3 hours</span></label>
+                            <label class="option"><input type="radio" name="quality_time" value="Less than an hour" required><span>Less than an hour</span></label>
+                            <label class="option"><input type="radio" name="quality_time" value="1-2 hours"><span>1-2 hours</span></label>
+                            <label class="option"><input type="radio" name="quality_time" value="2-3 hours"><span>2-3 hours</span></label>
+                            <label class="option"><input type="radio" name="quality_time" value="More than 3 hours"><span>More than 3 hours</span></label>
                         </div>
-                        
                         
                         <h3>What activities do you usually do with the child</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Talking/ Storytelling</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Playing</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Helping with homework</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Outdoor activities</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Watching screen together</span> </label>
-                        <label class="pill"><input type="checkbox"> <span>Very little interaction</span> </label>
-                        <label class="pill"><input type="checkbox"> <span>No interaction</span> </label>
-                        <label class="pill"><input type="checkbox"> <span>Other</span></label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Talking/ Storytelling" required> <span>Talking/ Storytelling</span></label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Playing"> <span>Playing</span></label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Helping with homework"> <span>Helping with homework</span></label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Outdoor activities"> <span>Outdoor activities</span></label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Watching screen together"> <span>Watching screen together</span> </label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Very little interaction"> <span>Very little interaction</span> </label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="No interaction"> <span>No interaction</span> </label>
+                            <label class="pill"><input type="checkbox" name="daily_activities[]" value="Other"> <span>Other</span></label>
+                            <textarea placeholder="Your answer..." name="daily_activities_other"></textarea>
                         </div>
-                        
                     </div>
                     
                     <!-- STEP 4 -->
                     <div class="step">
                         <h2>Screen Habits</h2>
-
                         <h3>Devices used by the child</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Smartphones</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Tablet/ ipad</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Laptop</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Television</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Other:</span> </label>
+                            <label class="pill"><input type="checkbox" name="screen_devices[]" value="Smartphones" required> <span>Smartphones</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_devices[]" value="Tablet/ ipad"> <span>Tablet/ ipad</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_devices[]" value="Laptop"> <span>Laptop</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_devices[]" value="Television"> <span>Television</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_devices[]" value="Other"> <span>Other:</span> </label>
+                            <textarea placeholder="Your answer..." name="screen_devices_other"></textarea>
                         </div>
                         
                         <h3>Approximate daily screen time of the child</h3>
-                        <div class="options">
-                        <label class="option"><input type="radio" name="daily_screen_time"><span>Less than an hour</span></label>
-                        <label class="option"><input type="radio" name="daily_screen_time"><span>1-2 hours</span></label>
-                        <label class="option"><input type="radio" name="daily_screen_time"><span>2-3 hours</span></label>
-                        <label class="option"><input type="radio" name="daily_screen_time"><span>More than 3 hours</span></label>
+                            <div class="options">
+                            <label class="option"><input type="radio" name="daily_screen_time" value="Less than an hour" required><span>Less than an hour</span></label>
+                            <label class="option"><input type="radio" name="daily_screen_time" value="1-2 hours"><span>1-2 hours</span></label>
+                            <label class="option"><input type="radio" name="daily_screen_time" value="2-3 hours"><span>2-3 hours</span></label>
+                            <label class="option"><input type="radio" name="daily_screen_time" value="More than 3 hours"><span>More than 3 hours</span></label>
                         </div>
 
                         <h3>Most common screen time period</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Morning</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Afternoon</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Evening</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Before sleep</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_period[]" value="Morning" required> <span>Morning</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_period[]" value="Afternoon"> <span>Afternoon</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_period[]" value="Evening"> <span>Evening</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_period[]" value="Before sleep"> <span>Before sleep</span></label>
                         </div>
 
                         <h3>Type of content watched by the child</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Cartoons</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Youtube videos</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Games</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Educational apps/ videos</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Other:</span> </label>
+                            <label class="pill"><input type="checkbox" name="content_type[]" value="Cartoons" required> <span>Cartoons</span></label>
+                            <label class="pill"><input type="checkbox" name="content_type[]" value="Youtube videos"> <span>Youtube videos</span></label>
+                            <label class="pill"><input type="checkbox" name="content_type[]" value="Games"> <span>Games</span></label>
+                            <label class="pill"><input type="checkbox" name="content_type[]" value="Educational apps/ videos"> <span>Educational apps/ videos</span></label>
+                            <label class="pill"><input type="checkbox" name="content_type[]" value="Other"> <span>Other:</span> </label>
+                            <textarea placeholder="Your answer..." name="content_type_other"></textarea>
                         </div>
 
                         <h3>Does the child become upset when screen time is limited?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="screen_time_limit"><span>Never</span></label>
-                        <label class="option"><input type="radio" name="screen_time_limit"><span>Sometimes</span></label>
-                        <label class="option"><input type="radio" name="screen_time_limit"><span>Often</span></label>
-                        <label class="option"><input type="radio" name="screen_time_limit"><span>Always</span></label>
+                            <label class="option"><input type="radio" name="screen_time_limit" value="Never" required><span>Never</span></label>
+                            <label class="option"><input type="radio" name="screen_time_limit" value="Sometimes"><span>Sometimes</span></label>
+                            <label class="option"><input type="radio" name="screen_time_limit" value="Often"><span>Often</span></label>
+                            <label class="option"><input type="radio" name="screen_time_limit" value="Always"><span>Always</span></label>
                         </div>
 
                         <h3>Does the child prefer screen over playing or interacting with others?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="prefer_screen"><span>Yes</span></label>
-                        <label class="option"><input type="radio" name="prefer_screen"><span>No</span></label>
-                        <label class="option"><input type="radio" name="prefer_screen"><span>Sometimes</span></label>
+                            <label class="option"><input type="radio" name="prefer_screen" value="Yes" required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="prefer_screen" value="No"><span>No</span></label>
+                            <label class="option"><input type="radio" name="prefer_screen" value="Sometimes"><span>Sometimes</span></label>
                         </div>
-
                     </div>
 
                     <!-- STEP 5 -->
@@ -193,42 +186,40 @@
                         <h2>Behavioral Impact</h2>
                         <h3>Have you noticed any behavioral changes due to screen use?</h3>
                         <div class="options">
-                            <label class="option"><input type="radio" name="behavioral_change"><span>Yes</span></label>
-                            <label class="option"><input type="radio" name="behavioral_change"><span>No</span></label>
+                            <label class="option"><input type="radio" name="behavioral_change" value="Yes" required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="behavioral_change" value="No"><span>No</span></label>
                         </div>
                         
 
                         <h3>If yes, then kindly mention what type of changes you have observed ( anger issues, temper tantrums, intensive emotions, poor impulse control, short attention span, hitting, biting, throwing objects, etc.)</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Aggression</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Tamper tantrums</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Intense emotions</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Difficulty in expressing emotions verbally</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Poor impulse control</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Short attention span</span></label>
-                        <label class="pill"><input type="checkbox"> <span>hitting, biting, throwing objects</span></label>
-                        <label class="pill"><input type="checkbox"><span>Crying often</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Frequent refusals</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Other:</span> </label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Aggression" required> <span>Aggression</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Temper tantrums"> <span>Tamper tantrums</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Intense emotions"> <span>Intense emotions</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Difficulty in expressing emotions verbally"> <span>Difficulty in expressing emotions verbally</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Poor impulse control"> <span>Poor impulse control</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Short attention span"> <span>Short attention span</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Hitting, biting, throwing objects"> <span>Hitting, biting, throwing objects</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Crying often"> <span>Crying often</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Frequent refusals"> <span>Frequent refusals</span></label>
+                            <label class="pill"><input type="checkbox" name="behavioral_changes[]" value="Other"> <span>Other:</span> </label>
+                            <textarea placeholder="Your answer..." name="behavioral_changes_other"></textarea>
                         </div>
-                        
-                        
+                    
                         <h3>Have you tried limiting screen time?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="limiting_screen_time"><span>Yes</span></label>
-                        <label class="option"><input type="radio" name="limiting_screen_time"><span>No</span></label>
+                            <label class="option"><input type="radio" name="limiting_screen_time" value="Yes" required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="limiting_screen_time" value="No"><span>No</span></label>
                         </div>
                         
-
                         <h3>If yes what difficulties did you face?</h3>
-                        <label><input type="text"></label>
-                        
+                        <label><input type="text" name="difficulties_faced"></label>
 
                         <h3>Did you sometimes allow screen time because you are busy or tired?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="allowing_screen_time"><span>Yes</span></label>
-                        <label class="option"><input type="radio" name="allowing_screen_time"><span>No</span></label>
-                             </div>
+                            <label class="option"><input type="radio" name="allowing_screen_time" value="Yes"required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="allowing_screen_time" value="No"><span>No</span></label>
+                        </div>
                     </div>
                     
                     <!-- STEP 6 -->
@@ -236,49 +227,49 @@
                         <h2>Your Needs & Support</h2>
                         <h3>Would you like guidance to manage your child’s screen habits?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="screen_habits"><span>Yes</span></label>
-                        <label class="option"><input type="radio" name="screen_habits"><span>No</span></label>
+                            <label class="option"><input type="radio" name="screen_habits" value="Yes" required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="screen_habits" value="No"><span>No</span></label>
                         </div>
 
                         <h3>What type of support would help you most?</h3>
                             <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Activity ideas</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Daily routine</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Behavior guidance</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Emotional support tips</span></label>
-                        <label class="pill"><input type="checkbox"> <span>All of the above</span></label>
-                        </div>
+                                <label class="pill"><input type="checkbox" name="support_type[]" value="Activity ideas" required> <span>Activity ideas</span></label>
+                                <label class="pill"><input type="checkbox" name="support_type[]" value="Daily routine"> <span>Daily routine</span></label>
+                                <label class="pill"><input type="checkbox" name="support_type[]" value="Behavior guidance"> <span>Behavior guidance</span></label>
+                                <label class="pill"><input type="checkbox" name="support_type[]" value="Emotional support tips"> <span>Emotional support tips</span></label>
+                                <label class="pill"><input type="checkbox" name="support_type[]" value="All of the above"> <span>All of the above</span></label>
+                            </div>
                         
                         <h3>In your own words, what worries you the most about your child's screen habits?</h3>
-                        <textarea placeholder="Your concerns..."></textarea>
+                        <textarea placeholder="Your concerns..." name="screen_habits_concerns" required></textarea>
                         
 
                         <h3>Which of the following screen time rules or strategies do you currently use for your child?</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Time limits (e.g., only 1 hour per day)</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Content restrictions (e.g., educational only)</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Screen-free zones (e.g., no devices at the dinner table)</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Screen-free times (e.g., no screens before bed)</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Co-viewing/Supervision (watching/using screens with the child)</span></label>
-                        <label class="pill"><input type="checkbox"> <span>None of the above</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_rules[]" value="Time limits"> <span>Time limits (e.g., only 1 hour per day)</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_rules[]" value="Content restrictions"> <span>Content restrictions (e.g., educational only)</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_rules[]" value="Screen-free zones"> <span>Screen-free zones (e.g., no devices at the dinner table)</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_rules[]" value="Screen-free times"> <span>Screen-free times (e.g., no screens before bed)</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_rules[]" value="Co-viewing/Supervision"> <span>Co-viewing/Supervision (watching/using screens with the child)</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_rules[]" value="None of the above"> <span>None of the above</span></label>
                         </div>
 
                         <h3>How frequently do you use screen time as a way to calm or distract your child?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="calm"><span>Never</span></label>
-                        <label class="option"><input type="radio" name="calm"><span>Rarely</span></label>
-                        <label class="option"><input type="radio" name="calm"><span>Sometimes</span></label>
-                        <label class="option"><input type="radio" name="calm"><span>Often</span></label>
-                        <label class="option"><input type="radio" name="calm"><span>Always</span></label>
+                            <label class="option"><input type="radio" name="calm" value="Never" required><span>Never</span></label>
+                            <label class="option"><input type="radio" name="calm" value="Rarely"><span>Rarely</span></label>
+                            <label class="option"><input type="radio" name="calm" value="Sometimes"><span>Sometimes</span></label>
+                            <label class="option"><input type="radio" name="calm" value="Often"><span>Often</span></label>
+                            <label class="option"><input type="radio" name="calm" value="Always"><span>Always</span></label>
                         </div>
 
                         <h3>Please rate the level of stress you experience regarding managing your child's screen time.</h3>
-                        <div class="options">
-                        <label class="option"><input type="radio" name="stress"><span>1</span></label>
-                        <label class="option"><input type="radio" name="stress"><span>2</span></label>
-                        <label class="option"><input type="radio" name="stress"><span>3</span></label>
-                        <label class="option"><input type="radio" name="stress"><span>4</span></label>
-                        <label class="option"><input type="radio" name="stress"><span>5</span></label>
+                            <div class="options">
+                            <label class="option"><input type="radio" name="stress" value="1" required><span>1</span></label>
+                            <label class="option"><input type="radio" name="stress" value="2"><span>2</span></label>
+                            <label class="option"><input type="radio" name="stress" value="3"><span>3</span></label>
+                            <label class="option"><input type="radio" name="stress" value="4"><span>4</span></label>
+                            <label class="option"><input type="radio" name="stress" value="5"><span>5</span></label>
                         </div>
                     </div>
                     
@@ -287,72 +278,72 @@
                         <h2>You're very close...</h2>
                         <h3>Which non-screen activities does your child prefer most when given a choice?</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Reading/Story time</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Outdoor play</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Arts and crafts/Drawing</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Puzzles/Building blocks</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Imaginative play (e.g., dress-up, role-playing)</span></label>
+                            <label class="pill"><input type="checkbox" name="non_screen_activities[]" value="Reading/Story time" required> <span>Reading/Story time</span></label>
+                            <label class="pill"><input type="checkbox" name="non_screen_activities[]" value="Outdoor play"> <span>Outdoor play</span></label>
+                            <label class="pill"><input type="checkbox" name="non_screen_activities[]" value="Arts and crafts/Drawing"> <span>Arts and crafts/Drawing</span></label>
+                            <label class="pill"><input type="checkbox" name="non_screen_activities[]" value="Puzzles/Building blocks"> <span>Puzzles/Building blocks</span></label>
+                            <label class="pill"><input type="checkbox" name="non_screen_activities[]" value="Imaginative play (e.g., dress-up, role-playing)"> <span>Imaginative play (e.g., dress-up, role-playing)</span></label>
                         </div>
 
                         <h3>What is the primary reason you allow your child screen time?</h3>
                         <div class="options">
-                        <label class="pill"><input type="checkbox"> <span>Educational purposes</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Educational purposes</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Keeping the child occupied while parents are busy</span></label>
-                        <label class="pill"><input type="checkbox"> <span>To calm the child down</span></label>
-                        <label class="pill"><input type="checkbox"> <span>To allow the child to socialize virtually (e.g., video calls with family)</span></label>
-                        <label class="pill"><input type="checkbox"> <span>Other</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_reason[]" value="Educational purposes" required> <span>Educational purposes</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_reason[]" value="Keeping the child occupied while parents are busy"> <span>Keeping the child occupied while parents are busy</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_reason[]" value="To calm the child down"> <span>To calm the child down</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_reason[]" value="To allow the child to socialize virtually (e.g., video calls with family)"> <span>To allow the child to socialize virtually (e.g., video calls with family)</span></label>
+                            <label class="pill"><input type="checkbox" name="screen_time_reason[]" value="Other"> <span>Other</span></label>
+                            <textarea placeholder="Your answer..." name="screen_time_reason_other"></textarea>
                         </div>
 
                         <h3>If you were provided with a digital app that offers parenting guidance and simple activities to support your child’s social and emotional development, would you be willing to use it?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="support_app"><span>Yes</span></label>
-                        <label class="option"><input type="radio" name="support_app"><span>No</span></label>
-                        <label class="option"><input type="radio" name="support_app"><span>Maybe</span></label>
+                            <label class="option"><input type="radio" name="support_app" value="Yes" required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="support_app" value="No"><span>No</span></label>
+                            <label class="option"><input type="radio" name="support_app" value="Maybe"><span>Maybe</span></label>
                         </div>
                         
                         <h3>How confident do you feel about learning child development activities digitally and practicing them with your child?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="confidence_app"><span>Very confident</span></label>
-                        <label class="option"><input type="radio" name="confidence_app"><span>Somewhat confident</span></label>
-                        <label class="option"><input type="radio" name="confidence_app"><span>Not very confident</span></label>
-                        <label class="option"><input type="radio" name="confidence_app"><span>Not confident at all</span></label>
+                            <label class="option"><input type="radio" name="confidence_app" value="Very confident" required><span>Very confident</span></label>
+                            <label class="option"><input type="radio" name="confidence_app" value="Somewhat confident"><span>Somewhat confident</span></label>
+                            <label class="option"><input type="radio" name="confidence_app" value="Not very confident"><span>Not very confident</span></label>
+                            <label class="option"><input type="radio" name="confidence_app" value="Not confident at all"><span>Not confident at all</span></label>
                         </div>
 
                         <h3>How much time per day could you realistically spend doing app-guided activities with your child?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="app_guided_activities"><span>Less than 5 mins.</span></label>
-                        <label class="option"><input type="radio" name="app_guided_activities"><span>5-15 mins.</span></label>
-                        <label class="option"><input type="radio" name="app_guided_activities"><span>15-30 mins.</span></label>
-                        <label class="option"><input type="radio" name="app_guided_activities"><span>More than 30 mins.</span></label>
+                            <label class="option"><input type="radio" name="app_guided_activities" value="Less than 5 mins." required><span>Less than 5 mins.</span></label>
+                            <label class="option"><input type="radio" name="app_guided_activities" value="5-15 mins."><span>5-15 mins.</span></label>
+                            <label class="option"><input type="radio" name="app_guided_activities" value="15-30 mins."><span>15-30 mins.</span></label>
+                            <label class="option"><input type="radio" name="app_guided_activities" value="More than 30 mins."><span>More than 30 mins.</span></label>
                         </div>
 
                         <h3>How useful can a digital app be as a solution for preparing parents to handle emotional issues in children</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="useful"><span>Very useful</span></label>
-                        <label class="option"><input type="radio" name="useful"><span>Somewhat useful</span></label>
-                        <label class="option"><input type="radio" name="useful"><span>Not very useful</span></label>
-                        <label class="option"><input type="radio" name="useful"><span>Not at all useful</span></label>
+                            <label class="option"><input type="radio" name="useful" value="Very useful" required><span>Very useful</span></label>
+                            <label class="option"><input type="radio" name="useful" value="Somewhat useful"><span>Somewhat useful</span></label>
+                            <label class="option"><input type="radio" name="useful" value="Not very useful"><span>Not very useful</span></label>
+                            <label class="option"><input type="radio" name="useful" value="Not at all useful"><span>Not at all useful</span></label>
                         </div>
 
                         <h3>Would you feel comfortable implementing emotional and social development activities with your child based on app guidance?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="comfort_app"><span>Yes</span></label>
-                        <label class="option"><input type="radio" name="comfort_app"><span>No</span></label>
-                        <label class="option"><input type="radio" name="comfort_app"><span>Maybe</span></label>
+                            <label class="option"><input type="radio" name="comfort_app" value="Yes" required><span>Yes</span></label>
+                            <label class="option"><input type="radio" name="comfort_app" value="No"><span>No</span></label>
+                            <label class="option"><input type="radio" name="comfort_app" value="Maybe"><span>Maybe</span></label>
                         </div>
 
                         <h3>In your own words, what worries you the most about your child's screen habits?</h3><br>
-                        <textarea placeholder="Your answer"></textarea>
+                        <textarea placeholder="Your answer" name="final_concerns" required></textarea>
                         
 
                         <h3>Overall, how likely are you to use a parenting guidance app, if it is easily accessible and simple to use?</h3>
                         <div class="options">
-                        <label class="option"><input type="radio" name="likely_usage"><span>Very likely - I would use it regularly</span></label>
-                        <label class="option"><input type="radio" name="likely_usage"><span>Likely - I would use it occassionaly</span></label>
-                        <label class="option"><input type="radio" name="likely_usage"><span>Neutral - I might try it sometimes</span></label>
-                        <label class="option"><input type="radio" name="likely_usage"><span>Unlike - I probably would not use it</span></label>
-                        <label class="option"><input type="radio" name="likely_usage"><span> Very Unlikely - I would not use it at all</span></label>
+                            <label class="option"><input type="radio" name="likely_usage" value="Very likely - I would use it regularly" required><span>Very likely - I would use it regularly</span></label>
+                            <label class="option"><input type="radio" name="likely_usage" value="Likely - I would use it occassionaly"><span>Likely - I would use it occassionaly</span></label>
+                            <label class="option"><input type="radio" name="likely_usage" value="Neutral - I might try it sometimes"><span>Neutral - I might try it sometimes</span></label>
+                            <label class="option"><input type="radio" name="likely_usage" value="Unlikely - I probably would not use it"><span>Unlikely - I probably would not use it</span></label>
+                            <label class="option"><input type="radio" name="likely_usage" value="Very Unlikely - I would not use it at all"><span>Very Unlikely - I would not use it at all</span></label>
                         </div>
                     </div>
                     <!-- NAV BUTTONS -->
@@ -361,13 +352,9 @@
                         <button type="button" id="nextBtn">Next</button>
                         <button type="submit" id="submitBtn">Submit</button>
                     </div>
-
                 </form>
-
             </div>
         </div>
-
         <script src="registerDetailForm.js"></script>
-        <script src="../backend/models/Form.js"></script>
     </body>
 </html>

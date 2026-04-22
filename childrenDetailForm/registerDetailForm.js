@@ -1,263 +1,118 @@
-// Wait till DOM loads
-document.addEventListener("DOMContentLoaded", function () {
+const mongoose = require("mongoose");
 
-    /* ===============================
-       1. GENERATE CHILD FORMS
-    =============================== */
+const childSchema = new mongoose.Schema({
+  // STEP 1
+  age: { type: String, required: true },
+  gender: { type: String, required: true },
 
-    window.generateForms = function () {
-        const count = document.getElementById("childCount").value;
-        const form = document.getElementById("childrenForm");
+  // STEP 2
+  relation: { type: String, required: true },
+  relation_other: String,
 
-        form.innerHTML = "";
+  mothers_employment: { type: String, required: true },
+  mothers_employment_other: String,
 
-        for (let i = 1; i <= count; i++) {
+  fathers_employment: { type: String, required: true },
+  fathers_employment_other: String,
 
-            form.innerHTML += `
-            
-            <div class="form-section">
-            <h3> Child ${i}</h3>
+  income: { type: String, required: true },
 
-            <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" name="child${i}_name" required>
-            </div>
+  primary_caregiver: { type: String, required: true },
+  primary_caregiver_other: String,
 
-            <div class="input-group">
-                <label>Gender</label><br>
+  absent_parent_caretaker: {
+    type: [String],
+    required: true
+  },
+  absent_parent_caretaker_other: String,
 
-                <label class="option">
-                    <input type="radio" name="child${i}_gender" value="Male" required>
-                    <span>Male</span>
-                </label>
+  // STEP 3
+  quality_time: { type: String, required: true },
 
-                <label class="option">
-                    <input type="radio" name="child${i}_gender" value="Female">
-                    <span>Female</span>
-                </label>
+  daily_activities: {
+    type: [String],
+    required: true
+  },
+  daily_activities_other: String,
 
-                <label>
-                    <input type="radio" name="child${i}_gender" value="Other" class="other-radio">
-                    Other
-                    <input type="text" name="child${i}_gender_other" class="other-text" disabled>
-                </label>
-            </div>
+  // STEP 4
+  screen_devices: {
+    type: [String],
+    required: true
+  },
+  screen_devices_other: String,
 
-            <div class="input-group">
-                <label>Relation</label><br>
+  daily_screen_time: { type: String, required: true },
 
-                <label class="option">
-                    <input type="radio" name="child${i}_relation" value="Mother" required>
-                    <span>Mother</span>
-                </label>
+  screen_time_period: {
+    type: [String],
+    required: true
+  },
 
-                <label class="option">
-                    <input type="radio" name="child${i}_relation" value="Father">
-                    <span>Father</span>
-                </label>
+  content_type: {
+    type: [String],
+    required: true
+  },
+  content_type_other: String,
 
-                <label>
-                    <input type="radio" name="child${i}_relation" value="Other" class="other-radio">
-                    Other
-                    <input type="text" name="child${i}_relation_other" class="other-text" disabled>
-                </label>
-            </div>
+  screen_time_limit: { type: String, required: true },
+  prefer_screen: { type: String, required: true },
 
-            <div class="input-group">
-                <label>Devices Used (Select multiple)</label><br>
+  // STEP 5
+  behavioral_change: { type: String, required: true },
 
-                <label><input type="checkbox" name="child${i}_devices" value="Mobile"> Mobile</label>
-                <label><input type="checkbox" name="child${i}_devices" value="TV"> TV</label>
-                <label><input type="checkbox" name="child${i}_devices" value="Tablet"> Tablet</label>
+  behavioral_changes: {
+    type: [String],
+    required: true
+  },
+  behavioral_changes_other: String,
 
-                <label>
-                    <input type="checkbox" class="other-checkbox">
-                    Other
-                    <input type="text" name="child${i}_devices_other" class="other-text" disabled>
-                </label>
-            </div>
+  limiting_screen_time: { type: String, required: true },
+  difficulties_faced: String,
 
-            </div>
-            `;
-        }
+  allowing_screen_time: { type: String, required: true },
 
-        if (count > 0) {
-            form.innerHTML += `<button type="submit" class="login-btn">Submit</button>`;
-        }
-    };
+  // STEP 6
+  screen_habits: { type: String, required: true },
 
+  support_type: {
+    type: [String],
+    required: true
+  },
 
-    /* ===============================
-       2. HANDLE "OTHER" INPUTS
-    =============================== */
+  screen_habits_concerns: { type: String, required: true },
 
-    document.addEventListener("change", function (e) {
+  screen_time_rules: [String],
 
-        // RADIO "OTHER"
-        if (e.target.classList.contains("other-radio")) {
-            const label = e.target.closest("label");
-            const text = label.querySelector(".other-text");
+  calm: { type: String, required: true },
+  stress: { type: String, required: true },
 
-            if (e.target.checked) {
-                text.disabled = false;
-                text.focus();
-            }
-        }
+  // STEP 7
+  non_screen_activities: {
+    type: [String],
+    required: true
+  },
 
-        // RESET OTHER TEXT WHEN NORMAL RADIO SELECTED
-        if (e.target.type === "radio" && !e.target.classList.contains("other-radio")) {
-            const groupName = e.target.name;
+  screen_time_reason: {
+    type: [String],
+    required: true
+  },
+  screen_time_reason_other: String,
 
-            document.querySelectorAll(`input[name="${groupName}"]`).forEach(r => {
-                const label = r.closest("label");
-                if (!label) return;
+  support_app: { type: String, required: true },
+  confidence_app: { type: String, required: true },
+  app_guided_activities: { type: String, required: true },
+  useful: { type: String, required: true },
+  comfort_app: { type: String, required: true },
 
-                const text = label.querySelector(".other-text");
-                if (text) {
-                    text.disabled = true;
-                    text.value = "";
-                }
-            });
-        }
+  final_concerns: { type: String, required: true },
 
-        // CHECKBOX "OTHER"
-        if (e.target.classList.contains("other-checkbox")) {
-            const label = e.target.closest("label");
-            const text = label.querySelector(".other-text");
+  likely_usage: { type: String, required: true },
 
-            if (e.target.checked) {
-                text.disabled = false;
-                text.focus();
-            } else {
-                text.disabled = true;
-                text.value = "";
-            }
-        }
-    });
-
-
-    /* ===============================
-       3. SCROLL-BASED TEXT CHANGE
-    =============================== */
-
-    const rightPanel = document.querySelector(".right-panel");
-    const text = document.getElementById("motivationalText");
-
-    let changed = false;
-
-    if (rightPanel && text) {
-        rightPanel.addEventListener("scroll", () => {
-            if (changed) return;
-
-            const scrollTop = rightPanel.scrollTop;
-            const scrollHeight = rightPanel.scrollHeight - rightPanel.clientHeight;
-
-            if (scrollHeight <= 0) return;
-
-            const percent = (scrollTop / scrollHeight) * 100;
-
-            if (percent > 50) {
-                changed = true;
-                text.innerText = "Just a little bit more and you will be nearer to your child's developmental goal 💙";
-            }
-        });
-    }
-
-
-    /* ===============================
-       4. MULTI-STEP FORM
-    =============================== */
-
-    let currentStep = 0;
-    const steps = document.querySelectorAll(".step");
-    const progress = document.getElementById("progress");
-
-    const nextBtn = document.getElementById("nextBtn");
-    const prevBtn = document.getElementById("prevBtn");
-    const submitBtn = document.getElementById("submitBtn");
-    const form = document.getElementById("multiForm");
-
-    if (steps.length > 0) {
-
-        function showStep(n) {
-            steps.forEach(step => step.classList.remove("active"));
-            steps[n].classList.add("active");
-
-            if (progress) {
-                progress.style.width = ((n + 1) / steps.length) * 100 + "%";
-            }
-
-            // Prev button
-            if (prevBtn) {
-                prevBtn.style.display = n === 0 ? "none" : "inline-block";
-            }
-
-            // Next / Submit toggle
-            if (n === steps.length - 1) {
-                if (nextBtn) nextBtn.style.display = "none";
-                if (submitBtn) submitBtn.style.display = "inline-block";
-            } else {
-                if (nextBtn) nextBtn.style.display = "inline-block";
-                if (submitBtn) submitBtn.style.display = "none";
-            }
-        }
-
-        showStep(currentStep);
-
-        if (nextBtn) {
-            nextBtn.onclick = function () {
-                if (currentStep < steps.length - 1) {
-                    currentStep++;
-                    showStep(currentStep);
-                }
-            };
-        }
-
-        if (prevBtn) {
-            prevBtn.onclick = function () {
-                if (currentStep > 0) {
-                    currentStep--;
-                    showStep(currentStep);
-                }
-            };
-        }
-
-        // Submit + Redirect
-        if (form) {
-            form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-
-            let data = {};
-
-            formData.forEach((value, key) => {
-                // handle multiple checkbox values
-                if (data[key]) {
-                    if (!Array.isArray(data[key])) {
-                        data[key] = [data[key]];
-                    }
-                    data[key].push(value);
-                } else {
-                    data[key] = value;
-                }
-            });
-
-            console.log(data); // debug
-
-            // send to backend
-            await fetch("http://localhost:5000/api/form", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            });
-
-            // redirect after save
-            window.location.href = "../dashboard/customDashboard.html";
-        });
-        }
-    }
-
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
+
+module.exports = mongoose.model("ChildData", childSchema);
