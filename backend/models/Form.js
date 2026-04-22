@@ -1,94 +1,118 @@
 const mongoose = require("mongoose");
-const FormSchema = new mongoose.Schema({
 
-    // STEP 1: CHILD
-    child: {
-        age: String,
-        gender: String
-    },
+const childSchema = new mongoose.Schema({
+  // STEP 1
+  age: { type: String, required: true },
+  gender: { type: String, required: true },
 
-    // STEP 2: FAMILY
-    family: {
-        relation: String,
-        relation_other: String,
+  // STEP 2
+  relation: { type: String, required: true },
+  relation_other: String,
 
-        mother_employment: String,
-        mother_other: String,
+  mothers_employment: { type: String, required: true },
+  mothers_employment_other: String,
 
-        father_employment: String,
-        father_other: String,
+  fathers_employment: { type: String, required: true },
+  fathers_employment_other: String,
 
-        income: String,
-        primary_caregiver: String,
-        caregiver_other: String,
+  income: { type: String, required: true },
 
-        absence_caregiver: [String],
-        absence_other: String
-    },
+  primary_caregiver: { type: String, required: true },
+  primary_caregiver_other: String,
 
-    // STEP 3: INTERACTION
-    interaction: {
-        quality_time: String,
-        activities: [String]
-    },
+  absent_parent_caretaker: {
+    type: [String],
+    required: true
+  },
+  absent_parent_caretaker_other: String,
 
-    // STEP 4: SCREEN HABITS
-    screen: {
-        devices: [String],
-        devices_other: String,
+  // STEP 3
+  quality_time: { type: String, required: true },
 
-        daily_time: String,
-        time_period: [String],
-        content_type: [String],
+  daily_activities: {
+    type: [String],
+    required: true
+  },
+  daily_activities_other: String,
 
-        upset_on_limit: String,
-        prefers_screen: String
-    },
+  // STEP 4
+  screen_devices: {
+    type: [String],
+    required: true
+  },
+  screen_devices_other: String,
 
-    // STEP 5: BEHAVIOR
-    behavior: {
-        noticed_changes: String,
-        issues: [String],
+  daily_screen_time: { type: String, required: true },
 
-        limited_screen: String,
-        limiting_difficulty: String,
+  screen_time_period: {
+    type: [String],
+    required: true
+  },
 
-        allowed_when_busy: String
-    },
+  content_type: {
+    type: [String],
+    required: true
+  },
+  content_type_other: String,
 
-    // STEP 6: SUPPORT
-    support: {
-        wants_guidance: String,
-        support_type: [String],
+  screen_time_limit: { type: String, required: true },
+  prefer_screen: { type: String, required: true },
 
-        concerns: String,
+  // STEP 5
+  behavioral_change: { type: String, required: true },
 
-        strategies_used: [String],
-        calm_usage: String,
-        stress_level: Number
-    },
+  behavioral_changes: {
+    type: [String],
+    required: true
+  },
+  behavioral_changes_other: String,
 
-    // STEP 7: FINAL
-    final: {
-        non_screen_activities: [String],
-        reason_for_screen: [String],
+  limiting_screen_time: { type: String, required: true },
+  difficulties_faced: String,
 
-        will_use_app: String,
-        confidence: String,
-        time_for_activities: String,
+  allowing_screen_time: { type: String, required: true },
 
-        usefulness: String,
-        comfort: String,
-        concerns_repeat: String,
+  // STEP 6
+  screen_habits: { type: String, required: true },
 
-        likelihood: String
-    },
+  support_type: {
+    type: [String],
+    required: true
+  },
 
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
+  screen_habits_concerns: { type: String, required: true },
 
+  screen_time_rules: [String],
+
+  calm: { type: String, required: true },
+  stress: { type: String, required: true },
+
+  // STEP 7
+  non_screen_activities: {
+    type: [String],
+    required: true
+  },
+
+  screen_time_reason: {
+    type: [String],
+    required: true
+  },
+  screen_time_reason_other: String,
+
+  support_app: { type: String, required: true },
+  confidence_app: { type: String, required: true },
+  app_guided_activities: { type: String, required: true },
+  useful: { type: String, required: true },
+  comfort_app: { type: String, required: true },
+
+  final_concerns: { type: String, required: true },
+
+  likely_usage: { type: String, required: true },
+
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
-module.exports = mongoose.model("Form", FormSchema);
+module.exports = mongoose.model("ChildData", childSchema);
