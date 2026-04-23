@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+  // Guest button nav
+  const guestBtn = document.querySelector(".guest-btn");
+  guestBtn.addEventListener("click", () => {
+    //Optional: Mark user as guest
+    localStorage.setItem("userType", "guest");
+    
+    //Redirect to homepage
+    window.location.href = "../homePage/homePage.html";
+  });
+
+  
   const form = document.getElementById("loginForm");
 
   form.addEventListener("submit", async (e) => {

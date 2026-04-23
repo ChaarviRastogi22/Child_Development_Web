@@ -17,16 +17,25 @@
         <img class="leftPanelImage" src="leftPanelImg.png"> 
     </div>
 
-    <div class="right-panel">
-        
-        <h1>Growing Together</h1>
+    <div class="right-panel"> 
+        <div class="brand">
+            <img src="../images/logo.png" alt="logo">
+            <h1>Growing Together</h1>
+        </div>
         <p class="sub-text">
             From newborn to 5 years — every step matters.
         </p>
-        <p>
+        <p class="sub-line">
             Track your child's milestones, understand their development,
             and support their growth with evidence-based insights.
         </p>
+        <button class="guest-btn" onclick="goAsGuest()">
+            Start without signing in
+        </button>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
         
         <form id="loginForm">
             <div class="input-group">
@@ -39,8 +48,7 @@
                 <input type="password" id="password" placeholder="Enter your password" required>
             </div>
             
-            <button type="submit" class="login-btn">Login</button>
-
+            <button type="submit" class="login-btn">Sign In</button>
         </form>
 
         <div class="extra-links">
