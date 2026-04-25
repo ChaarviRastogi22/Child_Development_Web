@@ -42,4 +42,31 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Server error ⚠️");
     }
   });
+
+  // ================== SLIDER ==================
+  let index = 0;
+  const slides = document.querySelector(".slides");
+  const totalSlides = document.querySelectorAll(".slide").length;
+
+  if (!slides || totalSlides === 0) return;
+
+  let interval;
+
+  function startSlider() {
+    interval = setInterval(() => {
+      index = (index + 1) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3500);
+  }
+
+  function stopSlider() {
+    clearInterval(interval);
+  }
+
+  // Pause on hover (better UX)
+  slides.addEventListener("mouseenter", stopSlider);
+  slides.addEventListener("mouseleave", startSlider);
+
+  // Start slider
+  startSlider();
 });
