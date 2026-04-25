@@ -76,13 +76,21 @@
 
 </div>
 
-<script>
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: 'smooth'
+    <script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+    </script>
+    
+    <div id="footer"></div>
+    <script>
+    fetch("../footer/footer.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
     });
-}
-</script>
-
+    </script>
 </body>
 </html>
