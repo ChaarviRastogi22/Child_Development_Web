@@ -35,6 +35,7 @@ body {
     padding: 40px 25px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* 👈 magic line */
 }
 
 .left-panel h1 {
@@ -47,7 +48,20 @@ body {
     font-size: 15px;
     opacity: 0.8;
 }
+.skip-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  background-color: transparent;
+  color: #007cd4;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
 
+.skip-btn:hover {
+  color: #100d4d;
+}
 /* RIGHT PANEL */
 .right-panel {
     width: 70%;
