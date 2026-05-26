@@ -372,7 +372,7 @@ body {
 /* ================= FEATURES ================= */
 
 .features-section {
-    padding: 120px 7%;
+    padding: 30px 7%;
 }
 
 /* TOP */
@@ -394,18 +394,17 @@ body {
 /* GRID */
 .feature-grid {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 20px;
 }
 
 /* CARD */
-
 .feature-card {
     position: relative;
-    background: white;
     border-radius: 35px;
-    padding: 40px 35px;
-    min-height: 280px;
+    padding: 10px;
+    height: 220px;
+    width: 300px;
     transition: 0.35s;
     box-shadow:0 10px 30px rgba(0,0,0,0.04);
 }
@@ -417,23 +416,39 @@ body {
 /* COLORS */
 
 .purple-card {
-    border: 2px solid #eadfff;
+    border: 2px solid #a194b9;
+    background-color: #f3eefe;
+    display: flex;
+    align-items: center;
 }
 
 .red-card {
-    border: 2px solid #ffd9df;
+    border: 2px solid hsl(351, 95%, 66%);
+    background-color: #ffd9df;
+    color: #fd5a73;
+    display: flex;
+    align-items: center;
 }
 
 .green-card {
-    border: 2px solid #d8ffe8;
+    border: 2px solid #6ef7a7;
+    background-color: #d8ffe8;
+    display: flex;
+    align-items: center;
 }
 
 .yellow-card {
-    border: 2px solid #fff0c5;
+    border: 2px solid #f9cc50;
+    background-color: #fff0c5;
+    display: flex;
+    align-items: center;
 }
 
 .blue-card {
-    border: 2px solid #dce8ff;
+    border: 2px solid #5f92f2;
+    background-color: #dce8ff;
+    display: flex;
+    align-items: center;
 }
 
 /* ICON */
@@ -446,13 +461,14 @@ body {
 /* CARD TEXT */
 
 .feature-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 15px;
 }
 
 .feature-card p {
     color: #666;
-    line-height: 1.8;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
 /* ARROW */
